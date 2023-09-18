@@ -1,0 +1,24 @@
+.home{
+    color: aquamarine;
+    text-align: center;
+    font-family: 'Times New Roman';
+}
+
+.text {
+    display: flex;
+    justify-content: flex-start;
+    color:rgb(26, 129, 84);
+    font-family: 'Times New Roman';
+    font-weight: bolder;
+}
+
+.container {
+    display: flex;
+   justify-content: space-around;
+}
+
+.image {
+    border-radius: 30px;
+    height: 300px;
+
+}

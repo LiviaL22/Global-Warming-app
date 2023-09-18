@@ -1,0 +1,21 @@
+.home{
+    text-align: center;
+    color: aquamarine;
+}
+
+.text {
+    color:rgb(26, 129, 84);
+    font-family: 'Times New Roman';
+    font-weight: bolder;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.graphic{
+    height: 500px;
+    width: 110vh;
+}
