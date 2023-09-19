@@ -6,3 +6,11 @@
     color: rgb(39, 187, 98);
     font-family: 'Times New Roman';
 }
+
+@media (max-width: 768px) {
+    .footer {
+     display: flex;
+     justify-content: center;
+    
+ }
+}

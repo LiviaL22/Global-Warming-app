@@ -17,6 +17,13 @@
 
 .graphic{
     height: 500px;
-    width: 110vh;
+    width: 700px;
   
 }
+
+@media (max-width: 600px) {
+    .graphic {
+      height: 200px;
+      width: 250px;
+    }
+  }
