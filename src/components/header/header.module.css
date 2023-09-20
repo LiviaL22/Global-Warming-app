@@ -24,6 +24,8 @@
     .navbar a {
      display: flex;
      justify-content:space-around;
+     text-align: center;
+     margin: 5px;
      padding: 0;
     
  }
