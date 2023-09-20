@@ -20,7 +20,7 @@ export default function Temperature(){
           Questo  vuol dire più inondazioni, più fenomeni atmosferici estremi e intere isole, regioni e metropoli a livello del mare sommerse dall&apos;acqua senza soluzioni tecnologiche adeguate.
         </p>
 
-        <Graphic/>
+        <LineChart/>
         </>
     );
 }
@@ -81,7 +81,7 @@ const setupChartTemperature = {
     },
   };
 
-  const Graphic = () => {
+  const LineChart = () => {
     return (
       <div className={Style.container}>
         <div>

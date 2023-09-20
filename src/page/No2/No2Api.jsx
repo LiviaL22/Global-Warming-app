@@ -4,14 +4,12 @@ import zoomPlugin from "chartjs-plugin-zoom";
 
 Chart.register(zoomPlugin);
 
-
-const apiNo2 = "https://global-warming.org/api/nitrous-oxide-api";
 export const newArrayTime = [];
 export const newArrayAverage = []; 
 export const neWArrayTrend = [];
 
 await axios
-  .get(apiNo2)
+  .get("https://global-warming.org/api/nitrous-oxide-api")
   .then((response) => {
     let dataApi = response.data.nitrous;
     console.log(dataApi);

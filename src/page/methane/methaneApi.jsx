@@ -4,14 +4,12 @@ import zoomPlugin from "chartjs-plugin-zoom";
 
 Chart.register(zoomPlugin);
 
-
-const apiMethane = "https://global-warming.org/api/methane-api";
 export const newArrayTime = []; 
 export const newArrayAverage = []; 
 export const newArrayTrend = [];
 
 await axios
-  .get(apiMethane)
+  .get("https://global-warming.org/api/methane-api")
   .then((response) => {
     let dataApi = response.data.methane;
     console.log(dataApi);

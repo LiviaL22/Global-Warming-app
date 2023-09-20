@@ -1,5 +1,5 @@
 import Style from './arctic.module.css';
-import {IoIceCreamSharp} from 'react-icons/io5';
+import { IoIceCreamSharp } from 'react-icons/io5';
 import { Line } from 'react-chartjs-2';
 import { newArrayTime, newArrayArcticArea, newArrayArcticExtent, newArrayArcticRank } from './arcticApi';
 
@@ -18,7 +18,7 @@ export default function arctic(){
           La rapida perdita riguardante quelli dell&apos;Antartide e della Groenlandia influenza le correnti oceaniche, poiché enormi quantità di acqua molto fredda di scioglimento glaciale che entra nelle acque oceaniche più calde sta rallentando le correnti oceaniche.
         </p>
 
-        <Graphic/>
+        <LineChart/>
         </>
     );
 }
@@ -93,7 +93,7 @@ const optionsChart = {
 };
 
 // eslint-disable-next-line react-refresh/only-export-components
-const Graphic = () => {
+const LineChart = () => {
   return (
     <div className={Style.container}>
       <div>
@@ -106,4 +106,3 @@ const Graphic = () => {
     </div>
   );
 };
-

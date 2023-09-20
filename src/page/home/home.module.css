@@ -19,6 +19,7 @@
 .image {
   border-radius: 30px;
   height: 300px;
+
 }
 
 @media (max-width: 600px) {

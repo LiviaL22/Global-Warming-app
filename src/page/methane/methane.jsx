@@ -20,7 +20,7 @@ export default function methane(){
          prevenendo 260mila morti premature ed evitando 775mila ricoveri ospedalieri legati all’asma.
         </p>
 
-        <Graphic/>
+        <LineChart/>
         </>
     )
 }
@@ -84,7 +84,7 @@ const setupChartMethane = {
 
   
   // eslint-disable-next-line react-refresh/only-export-components
-  const Graphic = () => {
+  const LineChart = () => {
     return (
       <div className={Style.container}>
         <div>

@@ -3,6 +3,7 @@ import { MdCo2 } from 'react-icons/md';
 import { Line } from 'react-chartjs-2';
 import { newArrayTime, newArrayTrend, newArrayCycle } from './Co2Api';
 
+
 export default function Co2(){
     return(
         <>
@@ -18,78 +19,78 @@ export default function Co2(){
          Tali gas presenti nell&apos;atmosfera terrestre catturano il calore del sole impedendogli di ritornare nello spazio.
         </p>
 
-        <Graphic/>
+        <LineChart/>
         </>
     );
 }
 
 const setupChartCo2 = {
-    labels: newArrayTime,
-    datasets: [
-      {
-        label: "Trend",
-        backgroundColor: "rgb(26, 129, 84)",
-        borderColor: "rgb(26, 129, 84)",
-        data: newArrayTrend,
-        borderWidth: 2, 
-        fill: false,
-        pointBorderWidth: -5, 
-        pointRadius: 1.5,
-      },
-      {
-        label: "Ciclo",
-        backgroundColor: "hsl(271, 76%, 53%)",
-        borderColor: "hsl(271, 76%, 53%)",
-        data: newArrayCycle,
-        borderWidth: 3, 
-        fill: false,
-        pointBorderWidth: -5, 
-        pointRadius: 1.5,
-      },
-    ],
-  };
-  
-  const optionsChart = {
-    responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      y: {
-        min: 350,
-        max: 450,
-        grid: {
-          color: "rgb(26, 129, 84)", 
-        },
-      },
-      x: {
-        grid: {
-          color: "rgb(26, 129, 84)", 
-        },
-      },
+  labels: newArrayTime,
+  datasets: [
+    {
+      label: "Trend",
+      backgroundColor: "rgb(26, 129, 84)",
+      borderColor: "rgb(26, 129, 84)",
+      data: newArrayTrend,
+      borderWidth: 2, 
+      fill: false,
+      pointBorderWidth: -5, 
+      pointRadius: 1.5,
     },
-    plugins: {
-      zoom: {
-        pan: {
-          enabled: true,
-          mode: "xy",
-        },
-        zoom: {
-          enabled: true,
-          mode: "xy",
-        },
-      },
+    {
+      label: "Ciclo",
+      backgroundColor: "hsl(271, 76%, 53%)",
+      borderColor: "hsl(271, 76%, 53%)",
+      data: newArrayCycle,
+      borderWidth: 3, 
+      fill: false,
+      pointBorderWidth: -5, 
+      pointRadius: 1.5,
     },
-  };
+  ],
+};
 
-  const Graphic = () => {
-    return (
-      <div className={Style.container}>
-        <div>
-          <Line
-            className={Style.graphic}
-            data={setupChartCo2}
-            options={optionsChart}
-          />
-        </div>
+const optionsChart = {
+  responsive: true,
+  maintainAspectRatio: false,
+  scales: {
+    y: {
+      min: 350,
+      max: 450,
+      grid: {
+        color: "rgb(26, 129, 84)", 
+      },
+    },
+    x: {
+      grid: {
+        color: "rgb(26, 129, 84)", 
+      },
+    },
+  },
+  plugins: {
+    zoom: {
+      pan: {
+        enabled: true,
+        mode: "xy",
+      },
+      zoom: {
+        enabled: true,
+        mode: "xy",
+      },
+    },
+  },
+};
+
+const LineChart = () => {
+  return (
+    <div className={Style.container}>
+      <div>
+        <Line
+          className={Style.graphic}
+          data={setupChartCo2}
+          options={optionsChart}
+        />
       </div>
-    );
-  };
+    </div>
+  );
+};

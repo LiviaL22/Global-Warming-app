@@ -4,15 +4,13 @@ import zoomPlugin from "chartjs-plugin-zoom";
 
 Chart.register(zoomPlugin);
 
-
-const apiArctic = "https://global-warming.org/api/arctic-api";
 export const newArrayTime = []; 
 export const newArrayArcticArea = []; 
 export const newArrayArcticExtent = [];
 export const newArrayArcticRank = [];
 
 await axios
-  .get(apiArctic)
+  .get( "https://global-warming.org/api/arctic-api")
   .then((response) => {
     let dataApi = response.data.arcticData;
     console.log(dataApi);

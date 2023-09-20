@@ -4,14 +4,12 @@ import zoomPlugin from "chartjs-plugin-zoom";
 
 Chart.register(zoomPlugin);
 
-
-const apiCo2= "https://global-warming.org/api/co2-api";
 export const newArrayTime = []; 
 export const newArrayTrend = []; 
 export const newArrayCycle = [];
 
 await axios
-  .get(apiCo2)
+  .get("https://global-warming.org/api/co2-api")
   .then((response) => {
     let dataApi = response.data.co2;
     console.log(dataApi);

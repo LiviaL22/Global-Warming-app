@@ -1,6 +1,6 @@
 import Style from './home.module.css';
 import { GiEarthAmerica } from 'react-icons/gi';
-import image from '../../assets/image/global2.webp';
+import image from '../../assets/image/globo.jpeg';
 
 export default function home() {
   

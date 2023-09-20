@@ -3,6 +3,7 @@ import { MdScience } from 'react-icons/md';
 import { Line } from 'react-chartjs-2';
 import { newArrayTime, newArrayAverage, neWArrayTrend } from './No2Api';
 
+
 export default function No2(){
     return(
         <>
@@ -24,7 +25,7 @@ export default function No2(){
          fenomeni di smog fotochimico e delle piogge acide.
         </p>
 
-        <Graphic/>
+        <LineChart/>
         </>
     )
 }
@@ -86,7 +87,7 @@ const setupChartNo2 = {
     },
   };
 
-  const Graphic = () => {
+  const LineChart = () => {
     return (
       <div className={Style.container}>
         <div>
@@ -99,3 +100,4 @@ const setupChartNo2 = {
       </div>
     );
   };
+
